@@ -924,17 +924,5 @@ In this case, a selected synonym will be inserted at the point."
            ("e" powerthesaurus-lookup-sentences-dwim)
            ("q" nil))))
 
-;;;###autoload
-(when (require 'transient nil :noerror)
-  (eval '(transient-define-prefix powerthesaurus-transient ()
-           "Transient for Power Thesaurus."
-           [["Similarity"
-             ("s" "Synonyms" powerthesaurus-lookup-synonyms-dwim)
-             ("a" "Antonyms" powerthesaurus-lookup-antonyms-dwim)
-             ("r" "Related Words" powerthesaurus-lookup-related-dwim)]
-            ["Information"
-             ("d" "Definitions" powerthesaurus-lookup-definitions-dwim)
-             ("e" "Example Sentences" powerthesaurus-lookup-sentences-dwim)]])))
-
 (provide 'powerthesaurus)
 ;;; powerthesaurus.el ends here
